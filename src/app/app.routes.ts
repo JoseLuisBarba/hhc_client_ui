@@ -2,6 +2,17 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
+        path: 'login',
+        loadComponent: () => import('./dashboard/pages/login/login.component'),
+        pathMatch: 'full'
+    },
+    {
+        path: 'create-user',
+        loadComponent: () => import('./dashboard/pages/userCreate/userCreate.component'),
+        pathMatch: 'full'
+    },
+    {
+
         path: 'dashboard',
         loadComponent: ( ) => import('./dashboard/dashboard.component'),
         children : [
@@ -60,5 +71,5 @@ export const routes: Routes = [
         path: '',
         redirectTo: '/dashboard',
         pathMatch: 'full'
-    }
+    } 
 ];
