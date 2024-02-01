@@ -53,6 +53,11 @@ export const routes: Routes = [
                 loadComponent: () => import('./dashboard/pages/mapScrean/mapScreen.component')
             },
             {
+                path: 'vehicles',
+                title: 'Vehicles',
+                loadComponent: () => import('./dashboard/pages/vehicles/vehicles.component')
+            },
+            {
                 path: 'view-transition1',
                 title: 'View Transition 1',
                 loadComponent: () => import('./dashboard/pages/view-transition/view-transition1.component')
