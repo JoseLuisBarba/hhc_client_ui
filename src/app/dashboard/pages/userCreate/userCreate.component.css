@@ -1,3 +1,42 @@
-:host {
-  display: block;
+/* Estilos para el contenedor principal */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.label-color {
+  color: #1A1717;
+}
+/* Estilos para las filas con dos columnas */
+.flex-row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Estilos para los elementos que ocuparán dos columnas */
+.full-width {
+  width: 100%;
+}
+
+/* Estilos específicos para el botón de Crear Cuenta */
+#create-account-btn {
+  grid-column: span 2; /* Ocupa dos columnas */
+  background-color: #279574; /* Color verde claro */
+  color: #ffffff; /* Texto en blanco */
+  border: none;
+  padding: 1.5rem; /* Ajusta el padding según tus preferencias */
+  cursor: pointer;
+  font-weight: bold; /* Hace que el texto sea más negrita */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto según tus preferencias */
+  border-radius: 0.375rem; /* Añade bordes redondeados (ajusta según tus preferencias) */
+}
+
+/* Estilos para el enlace a Iniciar Sesión */
+#login-link {
+  color: #279574; /* Color verde claro */
+  text-decoration: none;
+}
+
+#login-link:hover {
+  text-decoration: underline;
 }
