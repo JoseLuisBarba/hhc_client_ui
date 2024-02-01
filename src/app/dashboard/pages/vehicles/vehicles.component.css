@@ -1,3 +1,100 @@
-:host {
-  display: block;
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.vehiculos-container {
+  padding: 20px;
+}
+
+.title {
+  text-align: left; /* Cambiado de 'center' a 'left' */
+  margin-bottom: 30px; /* Agregado margen inferior para separar el título del siguiente elemento */
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 2px;
+}
+
+.search {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 0 5px 5px 0;
+}
+
+.vehiculo {
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos al inicio y al final del contenedor */
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.vehiculo:hover {
+  background-color: #1A2843;
+  color: #fff;
+}
+
+.ambulancia-img {
+  width: 200px; /* Ajusta el ancho de la imagen según tus preferencias */
+  height: auto;
+  margin-right: 15px; /* Ajustamos el margen a la derecha para separar la imagen de los demás elementos */
+}
+
+.vehiculo-info {
+  margin-right: 500px;
+}
+
+.id-text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.speed-text {
+  color: #00E995;
+  font-size: 20px;
+}
+
+.info-text {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.person-icon,
+.calendar-icon {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.person-icon img,
+.calendar-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.person-text,
+.price-text {
+  font-weight: 300;
+  font-size: 20px;
 }
