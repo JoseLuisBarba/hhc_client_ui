@@ -18,18 +18,14 @@
   width: 100%;
 }
 
-/* Estilos específicos para el botón de Crear Cuenta */
+
 #create-account-btn {
-  grid-column: span 2; /* Ocupa dos columnas */
-  background-color: #279574; /* Color verde claro */
-  color: #ffffff; /* Texto en blanco */
+  grid-column: span 2; 
   border: none;
-  padding: 1.5rem; /* Ajusta el padding según tus preferencias */
   cursor: pointer;
-  font-weight: bold; /* Hace que el texto sea más negrita */
-  font-size: 1.2rem; /* Ajusta el tamaño del texto según tus preferencias */
-  border-radius: 0.375rem; /* Añade bordes redondeados (ajusta según tus preferencias) */
+  font-weight: semi-bold; 
 }
+
 
 /* Estilos para el enlace a Iniciar Sesión */
 #login-link {
