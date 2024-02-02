@@ -60,8 +60,12 @@ img {
   margin-right: 15px; /* Ajustamos el margen a la derecha para separar la imagen de los demás elementos */
 }
 
+.vehiculo-content {
+  flex-grow: 1; /* Asegura que el contenido se expanda para llenar el espacio disponible */
+}
+
 .vehiculo-info {
-  margin-right: 500px;
+  text-align: left; /* Alinea el texto hacia la izquierda */
 }
 
 .id-text {
