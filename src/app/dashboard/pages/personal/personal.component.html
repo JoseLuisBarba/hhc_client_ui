@@ -1,1 +1,112 @@
-<p>personal works!</p>,
+<div class="doctor-container">
+    
+    <div class="title">
+        <h1>Personal de Salud</h1>
+    </div>
+    <button class="agregar-btn">
+        <div class="btn-content">
+          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>Agregar</span>
+        </div>
+      </button>
+      
+    <!-- Buscador -->
+    <div class="search relative lg:hidden">
+        <input type="text" placeholder="Buscar..." class="w-full rounded-md border border-gray-300 ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-10 focus:ring-slate-300 dark:bg-white dark:highlight-white/5 dark:hover:bg-gray-100">
+        <button type="button" class="absolute top-1/2 right-2 transform -translate-y-1/2 focus:outline-none">
+            <svg width="24" height="24" fill="none" aria-hidden="true" class="w-5 h-5 text-slate-400">
+                <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+            </svg>
+        </button>
+    </div>
+    
+        <!-- primer doctor xd replica lo mismo para los demas -->
+        <div class="doctor" id="doctor1">
+            <img class="doctor-img" src="../../../../assets/images/doctors/she.png" alt="doctor Image">
+            <div class="doctor-content">
+                <div class="doctor-info">
+                    <p class="id-text">Dr. Mariana Risco Arroyo</p>
+                    <p class="atendiendo">Atendiendo</p>
+                    <p class="info-text">Habilidad de experiencia</p>
+                    <div class="person-icon">
+                        <svg class="h-8 w-8 text-blue-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>                  
+                        <p class="person-text mt-1 ml-2">50 puntos</p>
+                    </div>
+                    
+                    <div class="calendar-icon">
+                        <svg class="h-8 w-8 text-red-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>                 
+                        <p class="price-text mt-1 ml-2">120 pacientes</p>
+                    </div>
+                    <!-- Contenedor de botones -->
+                    <div class="botones-container">
+                        <button class="eliminar-btn">Eliminar</button>
+                        <button class="editar-btn">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- segundo doctor xd replica lo mismo para los demas -->
+        <div class="doctor" id="doctor2">
+            <img class="doctor-img" src="../../../../assets/images/doctors/she.png" alt="doctor Image">
+            <div class="doctor-content">
+                <div class="doctor-info">
+                    <p class="id-text">Dr. Mariana Yahaira Luna Infantes</p>
+                    <p class="reserva">Reserva</p>
+                    <p class="info-text">Habilidad de experiencia</p>
+                    <div class="person-icon">
+                        <svg class="h-8 w-8 text-blue-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>                  
+                        <p class="person-text mt-1 ml-2">70 puntos</p>
+                    </div>
+                    
+                    <div class="calendar-icon">
+                        <svg class="h-8 w-8 text-red-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>                 
+                        <p class="price-text mt-1 ml-2">120 pacientes</p>
+                    </div>
+                    <!-- Contenedor de botones -->
+                    <div class="botones-container">
+                        <button class="eliminar-btn">Eliminar</button>
+                        <button class="editar-btn">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+            <!-- segundo doctor xd replica lo mismo para los demas -->
+            <div class="doctor" id="doctor3">
+                <img class="doctor-img" src="../../../../assets/images/doctors/she.png" alt="doctor Image">
+                <div class="doctor-content">
+                    <div class="doctor-info">
+                        <p class="id-text">Dr. Maria Jose Castillo Toledo</p>
+                        <p class="descanso">Descanso</p>
+                        <p class="info-text">Habilidad de experiencia</p>
+                        <div class="person-icon">
+                            <svg class="h-8 w-8 text-blue-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>                  
+                            <p class="person-text mt-1 ml-2">70 puntos</p>
+                        </div>
+                        
+                        <div class="calendar-icon">
+                            <svg class="h-8 w-8 text-red-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>                 
+                            <p class="price-text mt-1 ml-2">120 pacientes</p>
+                        </div>
+                        <!-- Contenedor de botones -->
+                        <div class="botones-container">
+                            <button class="eliminar-btn">Eliminar</button>
+                            <button class="editar-btn">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+        <!-- aqui puedes agregar mas -->
+    
+</div>
