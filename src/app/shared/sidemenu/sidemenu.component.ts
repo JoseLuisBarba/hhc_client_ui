@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { routes } from '../../app.routes';
 import { RouterModule } from '@angular/router';
 
@@ -14,7 +14,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidemenu.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SidemenuComponent { 
+export class SidemenuComponent implements OnInit{ 
+
 
 
   public menuItems = routes
@@ -24,9 +25,28 @@ export class SidemenuComponent {
     .filter( route => !route.path?.includes(':'));
 
  
+  status: boolean= false; 
+  closeStatus: boolean = false;
 
   constructor() {
-
+    this.status = false;
+    this.closeStatus = false;
   }
+
+  ngOnInit(): void {
+    this.status = false;
+    this.closeStatus = false;
+  }
+
+  onAction(): boolean {
+    this.status = !this.status;
+    return this.status;
+  }
+
+  closeNav(): boolean {
+    this.closeStatus = !this.closeStatus;
+    return this.status;
+  }
+
 
 }

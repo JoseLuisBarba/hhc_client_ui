@@ -20,6 +20,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit, booleanAttribute } f
 export class TitleComponent {
   
   @Input({required: true}) title!: string;
+  @Input() subtitle!: string;
   @Input({transform: booleanAttribute}) withShadow: boolean = false;
 
 

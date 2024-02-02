@@ -17,6 +17,7 @@ export const routes: Routes = [
         loadComponent: ( ) => import('./dashboard/dashboard.component'),
         children : [
             
+            /*
             {
                 path: 'change-detection',
                 title: 'Change Detection',
@@ -37,6 +38,7 @@ export const routes: Routes = [
                 title: 'Defer View',
                 loadComponent: () => import('./dashboard/pages/defer-view/defer-view.component')
             },
+            */
             {
                 path: 'personal',
                 title: 'Personal',
@@ -62,6 +64,7 @@ export const routes: Routes = [
                 title: 'Vehicles',
                 loadComponent: () => import('./dashboard/pages/vehicles/vehicles.component')
             },
+            /*
             {
                 path: 'view-transition1',
                 title: 'View Transition 1',
@@ -72,6 +75,7 @@ export const routes: Routes = [
                 title: 'View Transition 2',
                 loadComponent: () => import('./dashboard/pages/view-transition/view-transition2.component')
             },
+            */
             {
                 path: '',
                 redirectTo: 'control-flow',
