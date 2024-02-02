@@ -38,6 +38,11 @@ export const routes: Routes = [
                 loadComponent: () => import('./dashboard/pages/defer-view/defer-view.component')
             },
             {
+                path: 'personal',
+                title: 'Personal',
+                loadComponent: () => import('./dashboard/pages/personal/personal.component')
+            },
+            {
                 path: 'user/:id',
                 title: 'Users View',
                 loadComponent: () => import('./dashboard/pages/user/user.component')

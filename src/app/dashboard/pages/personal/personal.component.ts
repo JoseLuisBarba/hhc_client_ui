@@ -11,4 +11,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './personal.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PersonalComponent { }
+export default class PersonalComponent { }
