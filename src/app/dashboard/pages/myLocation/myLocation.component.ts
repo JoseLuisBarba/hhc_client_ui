@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MapService } from '@services/map.service';
+import { PlacesService } from '@services/places.service';
 
 @Component({
   selector: 'app-my-location',
@@ -14,11 +16,24 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export default class MyLocationComponent { 
 
 
-  constructor() {}
+  constructor(
+    private mapService: MapService,
+    private placesService: PlacesService
+  ) {}
 
 
   goToMyLocation() {
-    console.log('Ir a mi ubicación');
+
+    if ( !this.placesService.isUserLocationReady) {
+      throw Error('No hay ubicación de usuario.');
+    }
+
+    if (!this.mapService.isMapReady) {
+      throw Error('No hay mapa disponible');
+    }
+
+
+    this.mapService.flyTo(this.placesService.userLocation!)
   }
 
 }

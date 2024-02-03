@@ -5,6 +5,7 @@ import LoadingComponent from '../loading/loading.component';
 import MapViewComponent from '../mapView/mapView.component';
 import LogoComponent from '../logo/logo.component';
 import MyLocationComponent from '../myLocation/myLocation.component';
+import SearchBarComponent from '../searchBar/searchBar.component';
 
 
 
@@ -17,7 +18,7 @@ import MyLocationComponent from '../myLocation/myLocation.component';
     MapViewComponent,
     LogoComponent,
     MyLocationComponent,
-
+    SearchBarComponent
   ],
   templateUrl: './mapScreen.component.html',
   styleUrl: './mapScreen.component.css',

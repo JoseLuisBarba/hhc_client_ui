@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, AfterViewInit, ViewChild, ElementRef} from '@angular/core';
+import { MapService } from '@services/map.service';
 import { PlacesService } from '@services/places.service';
 import {Map, Popup, Marker} from 'mapbox-gl'
 
@@ -19,7 +20,11 @@ export default class MapViewComponent implements AfterViewInit {
   @ViewChild('mapDiv') mapDivElement?: ElementRef;
 
 
-  constructor( private placesService: PlacesService) {}
+  constructor( 
+    private placesService: PlacesService,
+    private mapService: MapService
+    
+  ) {}
 
   ngAfterViewInit(): void {
 
@@ -43,5 +48,10 @@ export default class MapViewComponent implements AfterViewInit {
       .setLngLat(this.placesService.userLocation)
       .setPopup(popup)
       .addTo(map);
+
+    this.mapService.setMap(map);
+
+
+
   }
 }
