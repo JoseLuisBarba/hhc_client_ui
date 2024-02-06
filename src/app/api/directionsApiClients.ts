@@ -11,27 +11,25 @@ import { environment } from "../../environments/environment.development";
 /**
  * check place api service
  */
-export class PlacesApiClient extends HttpClient {
+export class DirectionsApiClient extends HttpClient {
 
-    #baseUrl: string = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
+    #baseUrl: string = 'https://api.mapbox.com/directions/v5/mapbox/driving';
 
     constructor(handler: HttpHandler) {
         super(handler);
     }
 
-    public override get<T>(url: string, options: {
-        params?: HttpParams | {
-            [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
-        }
-    }) {
+    public override get<T>(url: string ) {
         
         url = this.#baseUrl + url;
         return super.get<T>(url, {
             params:{
-                limit: 5,
+                alternatives: false,
+                geometries: 'geojson',
                 language: 'es',
-                access_token: environment.apiKeyMapBox,
-                ...options.params
+                overview: 'simplified',
+                steps: false,
+                access_token: environment.apiKeyMapBox
             }
         });
 

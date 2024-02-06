@@ -33,7 +33,7 @@ export default class MyLocationComponent {
     }
 
 
-    this.mapService.flyTo(this.placesService.userLocation!)
+    this.mapService.flyTo(this.placesService.userLocation());
   }
 
 }

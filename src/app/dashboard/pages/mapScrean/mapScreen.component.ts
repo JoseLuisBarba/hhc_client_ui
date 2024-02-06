@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { PlacesService } from '@services/places.service';
 import LoadingComponent from '../loading/loading.component';
 import MapViewComponent from '../mapView/mapView.component';
 import LogoComponent from '../logo/logo.component';
 import MyLocationComponent from '../myLocation/myLocation.component';
 import SearchBarComponent from '../searchBar/searchBar.component';
+import { forkJoin } from 'rxjs';
 
 
 
@@ -24,16 +25,34 @@ import SearchBarComponent from '../searchBar/searchBar.component';
   styleUrl: './mapScreen.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class MapScreenComponent { 
+export default class MapScreenComponent implements OnInit { 
 
-  constructor( private placesService: PlacesService) {
-    
+  
+
+  constructor( private placesService: PlacesService)  {
+
+
+  }
+
+  ngOnInit(): void {
+      const observables = forkJoin([
+        this.placesService.getUserLocation()
+        
+      ]);
+      observables.subscribe(
+        () => {
+          this.placesService.userLocation
+        }
+      );
   }
 
 
+
   get isUserLocationReady() {
-    console.log(this.placesService.isUserLocationReady);
-    return this.placesService.isUserLocationReady;
+
+    
+    return this.placesService.userLocation();
+
   }
 
 
